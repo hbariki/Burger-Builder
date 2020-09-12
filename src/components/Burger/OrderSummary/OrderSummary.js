@@ -11,7 +11,6 @@ const OrderSummary = (props) => {
                         <span style={{textTransform: 'capitalize'}}>{igKey}</span>: {props.ingredients[igKey]}
                     </li>);
                 });
-
     return (
         <Aux>
             <h3>Your Order</h3>
@@ -19,7 +18,7 @@ const OrderSummary = (props) => {
             <ul>
                 {ingredientSummary}
             </ul>
-    <p>Total Price : {props.price}</p>
+    <p><strong>Total Price : {props.price.toFixed(2)}</strong></p>
             <p>Continue to checkout?</p>
             <Button btnType="Success" clicked={props.purchaseContinue}>CONTINUE</Button>
             <Button btnType="Danger" clicked={props.purchaseCancel}>CANCEL</Button>
